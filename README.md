@@ -31,15 +31,11 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Download Docker image
 
-``docker pull gsin11/styled-components-v5:latest``
-
-Build Docker image
-
-``docker build -t gsin11/styled-components-v5 .``
+``docker pull gsin11/styled-components-v5:1.0``
 
 Run Docker image
 
-``docker run -it --rm -p 80:3000 -d gsin11/styled-components-v5:latest``
+``docker run -it --rm -p 80:3000 -d gsin11/styled-components-v5:1.0``
 
 ### `yarn eject`
 
