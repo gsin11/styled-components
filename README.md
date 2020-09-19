@@ -27,6 +27,20 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `Docker setup`
+
+Download Docker image
+
+``docker pull gsin11/styled-components-v5:latest``
+
+Build Docker image
+
+``docker build -t gsin11/styled-components-v5 .``
+
+Run Docker image
+
+``docker run -it --rm -p 80:3000 -d gsin11/styled-components-v5:latest``
+
 ### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
