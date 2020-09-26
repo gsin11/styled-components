@@ -7,7 +7,7 @@ trigger:
 - master
 
 variables:
-  uiBuild: '/build'
+  uiBuild: 'build'
 
 pool:
   vmImage: 'ubuntu-latest'
