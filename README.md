@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Application is live here: [https://gsin.azurewebsites.net/](https://gsin.azurewebsites.net/)
+
 ## Available Scripts
 
 In the project directory, you can run:
