@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Application is live here: [https://gsin.azurewebsites.net/](https://gsin.azurewebsites.net/)
+Application is live here: [https://styled-components-v5.vercel.app/](https://styled-components-v5.vercel.app/)
 
 ## Available Scripts
 
