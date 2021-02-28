@@ -56,22 +56,53 @@ const StyledLink = styled(Link)`
   font-weight: ${props => props.isActive ? '700' : '400'};
 `;
 
-const MobileMenuIcon = styled.div`
-  margin: auto 0 auto auto;
-  width: 25px;
-  min-width: 25px;
-  padding: 5px;
+const MobileMenuIcon = styled.button`
+  display: block;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  width: 45px;
+  transform: translate(-50%,-50%);
+  background-color: transparent;
+  border-width: 0px;
+
+  &:before,
+  &:after {
+    background-color: ${p => p.theme.bodyFontColor};
+    content: '';
+    display: block;
+    height: 4px;
+    transition: all 200ms ease-in-out;
+  }
+  &:before {
+    box-shadow: 0 10px 0 ${p => p.theme.bodyFontColor};
+    margin-bottom: 16px;
+  }
+  &.open:before {
+    box-shadow: 0 0 0 ${p => p.theme.bodyFontColor};
+    transform: translateY(10px) rotate(45deg);
+  }
+  &.open:after{
+    transform: translateY(-10px) rotate(-45deg);
+  }
 
   @media(min-width: 768px) {
     display: none;
   }
+`;
 
-  >div{
-    height: 3px;
-    background: ${p => p.theme.bodyFontColor};
-    margin: 5px 0;
-    width: 100%;
-  }
+const Logo = styled.a`
+  width: 25px;
+  height: 25px;
+  display: block;
+  color: ${p => p.theme.bodyBackgroundColor};
+  background-color: ${p => p.theme.bodyFontColor};
+  box-shadow: 0 0 10px ${p => p.theme.bodyFontColor};
+  border-radius: 50%;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 8px;
+  padding: 10px;
 `;
 
 export default function Header() {
@@ -81,11 +112,8 @@ export default function Header() {
 
   return (
     <HeaderWrapper>
-      <MobileMenuIcon onClick={() => setMenuOpen(s => !s)}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </MobileMenuIcon>
+      <Logo>GS</Logo>
+      <MobileMenuIcon onClick={() => setMenuOpen(s => !s)} className={menuOpen ? "open" : ""}></MobileMenuIcon>
       <Menu open={menuOpen}>
         <StyledLink to="/" isActive={pathname === '/'}>Home</StyledLink>
         <StyledLink to="/login" isActive={pathname === '/login'}>Login</StyledLink>
